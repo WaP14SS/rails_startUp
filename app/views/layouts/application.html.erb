@@ -5,10 +5,48 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <style>
+    li>a:hover{
+      background-color:transparent !important;
+      color:#f2f2f2 !important;
+    }
+    a{
+      font-size: 1.3em !important;
+      color:#000 !important;
+    }
+    bg-inverse {
+    background-color: #ff0f00 !important;
+    }
+  </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
 </head>
 <body>
-
+    <div class="container">
+      <nav class="navbar navbar-dark bg-inverse" style='height: 35px; background-color: #ff0f00 !important;'>
+  <a class="navbar-brand" href="#">SaaS Website</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+  </ul>
+  <form class="form-inline float-xs-right">
+    <input class="form-control" type="text" placeholder="Search">
+    <button class="btn btn-outline-success" type="submit"
+    style='border-color:#000 !important; color:#fff !important; background-color:#000 !important;'>Search</button>
+  </form>
+</nav>
+  <div class="jumbotron">
+      <h1 class="display-3">Hello, world!</h1>
+      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <hr class="my-2">
+      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      </p>
+  </div>
 <%= yield %>
 
+    </div><!--Container-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 </body>
 </html>
